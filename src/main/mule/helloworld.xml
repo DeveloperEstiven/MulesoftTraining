@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
-	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
-http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
 	
 	<flow name="helloworldFlow" doc:id="35097043-4a9b-4d11-9271-0746f6dff5ab" >
 		<http:listener doc:name="Listener" doc:id="f9becd3f-b00e-4868-bbcd-ba2a556f9cf6" config-ref="HTTP_Listener_config" path="/hi" allowedMethods="GET"/>
 		<set-payload value="Hello, World!" doc:name="Set St Payload" doc:id="b0249442-ce45-4ed8-abb3-59a7e064c8aa" />
-		<logger level="INFO" doc:name="Logger" doc:id="71c5db99-df91-4da2-b68d-c41bad9abcca" message='#[output application/java&#10;---&#10;"Username: " ++ Mule::p("secure::username") ++ " - " ++ "Password: " ++ Mule::p("secure::password")]'/>
+		<logger level="INFO" doc:name="Logger" doc:id="71c5db99-df91-4da2-b68d-c41bad9abcca" message='#[output application/java&#10;---&#10;"🔴🔴🔴🔴🔴🔴 Username: " ++ Mule::p("secure::username") ++ " - " ++ "Password: " ++ Mule::p("secure::password")]'/>
 	</flow>
 </mule>
